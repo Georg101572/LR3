@@ -24,21 +24,29 @@
 Файл: ElementЯшкин/element.py
 
 #### 2.1. Базовая структура класса
-'''python
+'''
+
+python
 class ElementЯшкин:
     def __init__(self, name, symbol, number):
         self.name = name
         self.symbol = symbol
         self.number = number
         
+'''
 #### 2.2. Добавление метода dump()
+'''
+
 python
 def dump(self):
     print(f"Название: {self.name}")
     print(f"Символ: {self.symbol}")
     print(f"Номер: {self.number}")
-    
+
+'''
 #### 2.3. Инкапсуляция и геттеры
+'''
+
 python
 class ElementЯшкин:
     def __init__(self, name, symbol, number):
@@ -62,15 +70,19 @@ class ElementЯшкин:
         print(f"Название: {self.__name}")
         print(f"Символ: {self.__symbol}")
         print(f"Номер: {self.__number}")
-'''
 
+'''
 #### 2.4. Создание объекта
 '''
+
 python
 element = ElementЯшкин("Азот", "N", 7)
 element.dump()
+
+'''
 ### 3. Программа расчета площади цилиндра
 Структура приложения (папка app/):
+'''
 
 text
 app/
@@ -79,7 +91,10 @@ app/
 ├── main.py
 └── test.py
 
+'''
 #### 3.1. Класс Cylinder (cylinder.py)
+'''
+
 python
 import math
 
@@ -91,10 +106,11 @@ class Cylinder:
     def calculate_surface_area(self):
         # S = 2πr² + 2πrh = 2πr(r + h)
         return 2 * math.pi * self.radius * (self.radius + self.height)
-'''
 
+'''
 #### 3.2. Основная программа (main.py)
 '''
+
 python
 from cylinder import Cylinder
 
@@ -109,10 +125,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
 '''
-
 #### 3.3. Тестирование (test.py)
 '''
+
 python
 from cylinder import Cylinder
 
@@ -123,8 +140,8 @@ def test():
         print(f"r={r}, h={h} -> {c.calculate_surface_area():.2f}")
 
 test()
-'''
 
+'''
 ### 4. Работа с ветками Git
 
 - Ветка	Назначение	Статус
@@ -135,6 +152,7 @@ test()
 Для каждой ветки создан Pull Request с последующим слиянием в master.
 
 ### 5. Результаты
+'''
 
 Созданные классы:
 Класс	Атрибуты	Методы
@@ -145,6 +163,7 @@ Cylinder	radius, height	calculate_surface_area()
 Символ: N
 Номер: 7
 
+'''
 ### 6. Пример работы программы
 text
 ''
