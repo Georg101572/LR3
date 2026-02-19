@@ -3,6 +3,23 @@ class ElementЯшкин:
         self.name = name
         self.symbol = symbol
         self.number = number
+        
+  # Свойства-геттеры для доступа к приватным атрибутам
+    @property
+    def name(self):
+        """Геттер для name"""
+        return self.__name
+    
+    @property
+    def symbol(self):
+        """Геттер для symbol"""
+        return self.__symbol
+    
+    @property
+    def number(self):
+        """Геттер для number"""
+        return self.__number
+    
     
     def dump(self):
         """Метод для вывода всех атрибутов"""
@@ -18,3 +35,9 @@ my_element = ElementЯшкин("Азот", "N", 7)
 
 # Используем метод dump()
 my_element.dump()
+
+# Демонстрация работы геттеров
+print("\nДоступ через геттеры:")
+print(f"name: {my_element.name}")
+print(f"symbol: {my_element.symbol}")
+print(f"number: {my_element.number}")
